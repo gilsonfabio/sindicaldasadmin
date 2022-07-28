@@ -143,7 +143,7 @@ export default function Compras() {
       />
       <div className={classes.cadastrar}>
         <Button variant="contained" color="primary">
-          <Link to={`/pdfExtConv/${datVencto}`} className="button-edit" className={classes.link}>Imprime PDF</Link>        
+          <Link to={`/pdfExtConv/${datVencto}`} className="button-edit" >Imprime PDF</Link>        
         </Button>
       </div>
       <div className={classes.totaliza}>
