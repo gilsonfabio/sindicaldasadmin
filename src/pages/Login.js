@@ -124,7 +124,7 @@ export default function Login() {
 
         <Grid container spacing={1}>
           <Grid item xs={12}>
-            <Link to="#">
+            <Link to={`/forgotpassword`}>
               <Button variant="text" fullWidth={true}>
                 Esqueceu a senha?
               </Button>
