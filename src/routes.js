@@ -10,6 +10,33 @@ import Admin from './pages/Administradores';
 import NewAdmin from './pages/NewAdmin';
 import AltAdmin from './pages/AltAdmin';
 
+import Secretarias from './pages/Secretarias';
+import AltSecretaria from './pages/AltSecretaria';
+import NewSecretaria from './pages/NewSecretaria';
+
+import Atividades from './pages/Atividades';
+import AltAtividade from './pages/AltAtividade';
+import NewAtividade from './pages/NewAtividade';
+
+import Convenios from './pages/Convenios';
+import AltConvenio from './pages/AltConvenio';
+import NewConvenio from './pages/NewConvenio';
+
+import OrgAdmin from './pages/OrgAdmin';
+import AltOrgAdmin from './pages/AltOrgAdmin';
+import NewOrgAdmin from './pages/NewOrgAdmin';
+
+import Servidores from './pages/Servidores';
+import AltServidor from './pages/AltServidores';
+import NewServidor from './pages/NewServidor';
+
+import Filiacao from './pages/Filiacao';
+import Informacoes from './pages/Informacoes';
+import NewFiliacao from './pages/NewFiliacao';
+import AltFiliacao from './pages/AltFiliacao';
+import AltInformacao from './pages/AltInformacao';
+import NewInformacao from './pages/NewInformacao';
+
 import ForgotPassword from './pages/ForgotPassword';
 
 export default function MainRoutes() {
@@ -25,6 +52,33 @@ export default function MainRoutes() {
             <Route path="/admin" element={<Admin />} />   
             <Route path="/newadmin" element={<NewAdmin />} />
             <Route path="/altadmin" element={<AltAdmin />} />
+
+            <Route path="/secretarias" element={<Secretarias />} />
+            <Route path="/altsecretaria/:secId" element={<AltSecretaria />} />
+            <Route path="/newsecretaria" element={<NewSecretaria />} />
+
+            <Route path="/atividades" element={<Atividades />} />
+            <Route path="/altAtividade/:atvId" element={<AltAtividade />} />
+            <Route path="/newatividade" element={<NewAtividade />} />
+
+            <Route path="/convenios" element={<Convenios />} />
+            <Route path="/altconvenio/:cnvId" element={<AltConvenio />} />
+            <Route path="/newconvenio" element={<NewConvenio />} />
+
+            <Route path="/orgadmin" element={<OrgAdmin />} />
+            <Route path="/altorgadmin/:orgId" element={<AltOrgAdmin />} />
+            <Route path="/neworgadmin" element={<NewOrgAdmin />} />
+
+            <Route path="/servidores" element={<Servidores />} />
+            <Route path="/altservidor/:usrId" element={<AltServidor/>} />
+            <Route path="/newservidor" element={<NewServidor/>} />
+
+            <Route path="/filiacao/:usrId" element={<Filiacao/>} />
+            <Route path="/informacoes/:usrId" element={<Informacoes/>} />
+            <Route path="/newinformacao/:usrId" element={<NewInformacao/>} />
+            <Route path="/newfiliacao/:usrId" element={<NewFiliacao/>} />
+            <Route path="/altfiliacao/:filUsrId/:filId" element={<AltFiliacao/>} />
+            <Route path="/altfinformacao/:infUsrId/:infId" element={<AltInformacao/>} />
 
         </Routes>        
     )
