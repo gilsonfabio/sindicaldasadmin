@@ -39,6 +39,14 @@ import NewInformacao from './pages/NewInformacao';
 
 import ForgotPassword from './pages/ForgotPassword';
 
+import Extratos from './pages/Compras';
+import ExtVencto from './pages/ExtVencto';
+import PdfCmpVenc from './pages/PdfCmpVenc';
+import ExtAdmin from './pages/ExtAdmin';
+import PdfExtConv from './pages/PdfExtConv';
+import StaCartao from './pages/StaCartao';
+import ImpFicha from './pages/ImpFicha';
+
 export default function MainRoutes() {
     return(
         <Routes>
@@ -79,6 +87,14 @@ export default function MainRoutes() {
             <Route path="/newfiliacao/:usrId" element={<NewFiliacao/>} />
             <Route path="/altfiliacao/:filUsrId/:filId" element={<AltFiliacao/>} />
             <Route path="/altfinformacao/:infUsrId/:infId" element={<AltInformacao/>} />
+
+            <Route path="/extratos" element={<Extratos/>} />
+            <Route path="/vdavencimento" element={<ExtVencto/>} />
+            <Route path="/pdfCmpVenc/:datVencto/" element={<PdfCmpVenc />} />
+            <Route path="/extAdmin/" element={<ExtAdmin />} />
+            <Route path="/pdfExtConv/:datVencto/" element={<PdfExtConv />} />
+            <Route path="/stacartao/:usrId" element={<StaCartao/>} />
+            <Route path="/impficha/:usrId" element={<ImpFicha/>} />
 
         </Routes>        
     )
