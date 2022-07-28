@@ -1,5 +1,5 @@
 import axios from 'axios';
 
-const api = axios.create({baseURL: 'https://sindicatobackend.herokuapp.com:3333' });
+const api = axios.create({baseURL: 'https://sindicatobackend.herokuapp.com' });
 
 export default api;
