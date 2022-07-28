@@ -52,42 +52,7 @@ export default function MainRoutes() {
     return(
         <Routes>
             <Route path="/" element={<Login />} />
-            <Route path="/layout" element={<Layout />} />
-            <Route path="/secretarias" element={<Secretarias />} />
-            <Route path="/altsecretaria/:secId" element={<AltSecretaria />} />
-            <Route path="/newsecretaria" element={<NewSecretaria />} />
-            <Route path="/users" element={<Users />} />   
-            <Route path="/newuser" element={<NewUser />} />
-            <Route path="/altuser/:usrId" element={<AltUser/>} />
-            <Route path="/admin" element={<Admin />} />   
-            <Route path="/newadmin" element={<NewAdmin />} />
-            <Route path="/altadmin" element={<AltAdmin />} />
-            <Route path="/convenios" element={<Convenios />} />
-            <Route path="/altconvenio/:cnvId" element={<AltConvenio />} />
-            <Route path="/newconvenio" element={<NewConvenio />} />
-            <Route path="/atividades" element={<Atividades />} />
-            <Route path="/altAtividade/:atvId" element={<AltAtividade />} />
-            <Route path="/newatividade" element={<NewAtividade />} />
-            <Route path="/orgadmin" element={<OrgAdmin />} />
-            <Route path="/altorgadmin/:orgId" element={<AltOrgAdmin />} />
-            <Route path="/neworgadmin" element={<NewOrgAdmin />} />
-            <Route path="/servidores" element={<Servidores />} />
-            <Route path="/altservidor/:usrId" element={<AltServidor/>} />
-            <Route path="/newservidor" element={<NewServidor/>} />
-            <Route path="/extratos" element={<Extratos/>} />
-            <Route path="/vdavencimento" element={<ExtVencto/>} />
-            <Route path="/filiacao/:usrId" element={<Filiacao/>} />
-            <Route path="/informacoes/:usrId" element={<Informacoes/>} />
-            <Route path="/newinformacao/:usrId" element={<NewInformacao/>} />
-            <Route path="/newfiliacao/:usrId" element={<NewFiliacao/>} />
-            <Route path="/altfiliacao/:filUsrId/:filId" element={<AltFiliacao/>} />
-            <Route path="/altfinformacao/:infUsrId/:infId" element={<AltInformacao/>} />
-            <Route path="/forgotpassword" element={<ForgotPassword />} />
-            <Route path="/pdfCmpVenc/:datVencto/" element={<PdfCmpVenc />} />
-            <Route path="/extAdmin/" element={<ExtAdmin />} />
-            <Route path="/pdfExtConv/:datVencto/" element={<PdfExtConv />} />
-            <Route path="/stacartao/:usrId" element={<StaCartao/>} />
-            <Route path="/impficha/:usrId" element={<ImpFicha/>} />
+            <Route path="/layout" element={<Layout />} />            
         </Routes>        
     )
 }
