@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
-//import moment from 'moment';
+import moment from 'moment';
+import 'moment/locale/pt-br';
 import { useParams } from 'react-router-dom';
 
 import api from '../services/api';
@@ -89,7 +90,10 @@ function PdfCnvContrato() {
 
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
-    const dia = 10;
+    const dateNow = moment(); 
+    const dia = moment().format('DD');
+    const mes = moment().format('MMMM');
+    const ano = moment().format('YYYY');
 
     const reportTitle = [
         {
@@ -202,7 +206,7 @@ function PdfCnvContrato() {
                     'Fica eleito o foro da Comarca de Caldas Novas/GO, para dirimirem as dúvidas provenientes da execução e cumprimento do mesmo, renunciando a qualquer outro',
                     ', por mais especial que se apresente, sendo regido ainda pelo Código Civil e regras estatutárias, tendo em vista que o caráter é de associatividade sem fins lucrativos.\n\n',
                     'E por estarem certos, justos e contratos, firmam o presente em duas vias de igual teor e forma, na presença de duas testemunhas que também assinam.\n\n',
-                    `Caldas Novas/GO,${dia}    de                de          \n\n\n`,
+                    `Caldas Novas/GO, ${dia}   de ${mes}     de ${ano}          \n\n\n`,
                     '______________________________________________________________________________\n\n\n',
                     'Rosimeire Pereira Martins – Diretora Financeira da Associação Cultural, Esportiva e Social dos Servidores Públicos Municipais de Caldas Novas.\n\n',
                     '______________________________________________________________________________\n\n\n', 

@@ -22,7 +22,7 @@ import AssignmentReturnedIcon from '@material-ui/icons/AssignmentReturned';
 import CancelIcon from '@material-ui/icons/Cancel';
 import { useNavigate } from 'react-router-dom';
 
-import bannerCine from '../assets/images/bannerCard3.jpg';
+import bannerCine from '../assets/images/bannerCard1.jpg';
 
 import { Link  } from 'react-router-dom';
 
