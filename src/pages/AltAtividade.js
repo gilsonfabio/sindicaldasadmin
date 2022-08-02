@@ -38,8 +38,6 @@ export default function AltAtividade() {
 
   const [atvDescricao, setAtvDescricao] = useState('');
   const [atvTaxAdm, setAtvTaxAdm] = useState('');
-  
-  const [atividades, setAtividades] = useState([]);
 
   function handleCreateAtividade(e) {
     e.preventDefault();

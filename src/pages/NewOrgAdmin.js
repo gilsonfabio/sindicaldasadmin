@@ -33,7 +33,6 @@ export default function NewOrgAdmin() {
   const classes = useStyles();
   const navigate = useNavigate();
 
-  const [orgCodigo, setOrgCodigo] = useState('');
   const [orgDescricao, setOrgDescricao] = useState('');
   
   function handleCreateOrgAdmin(e) {

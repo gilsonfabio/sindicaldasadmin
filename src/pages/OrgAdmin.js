@@ -82,7 +82,7 @@ export default function OrgAdmin() {
       <MenBarra />
       <div className={classes.cadastrar}>
       <Button variant="contained" color="primary">
-        <Link to={`/neworgadmin`} className="button-edit" className={classes.link}>Novo Orgão</Link>        
+        <Link to={`/neworgadmin`} className={classes.link}>Novo Orgão</Link>        
       </Button>
       </div>
       <TableContainer component={Paper}>

@@ -82,7 +82,7 @@ export default function Convenios() {
       <MenBarra />
       <div className={classes.cadastrar}>
       <Button variant="contained" color="primary">
-        <Link to={`/newConvenio`} className="button-edit" className={classes.link}>Novo Convênio</Link>        
+        <Link to={`/newConvenio`} className={classes.link}>Novo Convênio</Link>        
       </Button>
       </div>
       <TableContainer component={Paper}>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
-import moment from 'moment';
+//import moment from 'moment';
 import { useParams } from 'react-router-dom';
 
 import DeleteIcon from '@material-ui/icons/Delete';
@@ -66,10 +66,10 @@ function PdfExtConv() {
 
     const params = useParams();  
 
-    const [datInicial, setDatInicial] = useState();
-    const [datFinal, setDatFinal] = useState();
+    //const [datInicial, setDatInicial] = useState();
+    //const [datFinal, setDatFinal] = useState();
 
-    const soma = 0;
+    //const soma = 0;
 
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
 

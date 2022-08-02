@@ -36,8 +36,6 @@ export default function NewInformacao() {
   const idUsr = params.usrId;
 
   const [infUsrId, setInfUsrId] = useState(idUsr);
-  const [InfId, setInfId] = useState(0);
-  const [infData, setInfData] = useState(new Date());
   const [infDescricao, setInfDescricao] = useState('');
   
   function handleCreateInformacao(e) {

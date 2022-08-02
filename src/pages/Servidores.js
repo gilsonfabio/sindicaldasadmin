@@ -19,7 +19,6 @@ import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import CreditCardIcon from '@material-ui/icons/CreditCard';
 import LocalPrintshopIcon from '@material-ui/icons/LocalPrintshop';
 import HowToRegIcon from '@material-ui/icons/HowToReg';
-import { useNavigate } from 'react-router-dom';
 import MenBarra from '../components/MenBarra/MenBarra';
 import { TextField } from '@material-ui/core';
 
@@ -89,8 +88,6 @@ export default function Servidores() {
   const [search, setSearch] = useState(['']);
   const [cpfAnt, setCpfAnt] = useState();
 
-  const navigate = useNavigate();
-
   useEffect(() => {
     api.get(`users`).then(response => {
         setUsers(response.data);
@@ -159,8 +156,9 @@ export default function Servidores() {
             <StyledTableCell align="left">Email Usuário</StyledTableCell>
             <StyledTableCell align="right">Filiação</StyledTableCell>
             <StyledTableCell align="right">Informações</StyledTableCell>
-            <StyledTableCell align="right">Status Cartão</StyledTableCell>
-            <StyledTableCell align="right">Imprime Ficha</StyledTableCell>
+            <StyledTableCell align="right">Status</StyledTableCell>
+            <StyledTableCell align="right">Ficha</StyledTableCell>
+            <StyledTableCell align="right">Contrato</StyledTableCell>
             <StyledTableCell align="right">Editar</StyledTableCell>
             <StyledTableCell align="right">Excluir</StyledTableCell>
           </TableRow>
@@ -188,6 +186,11 @@ export default function Servidores() {
               </StyledTableCell>
               <StyledTableCell align="right">
               <Link to={`/impficha/${row.usrId}`} >
+                <LocalPrintshopIcon />
+              </Link>                         
+              </StyledTableCell>
+              <StyledTableCell align="right">
+              <Link to={`/pdfcnvcontrato/${row.usrId}`} >
                 <LocalPrintshopIcon />
               </Link>                         
               </StyledTableCell>

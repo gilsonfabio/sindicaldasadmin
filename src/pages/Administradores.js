@@ -14,7 +14,6 @@ import { Button } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
-import { useNavigate } from 'react-router-dom';
 import MenBarra from '../components/MenBarra/MenBarra';
 
 const StyledTableCell = withStyles((theme) => ({
@@ -52,7 +51,6 @@ const useStyles = makeStyles({
 export default function Administradores() {
   const classes = useStyles();
   const [administradores, setAdministradores] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     api.get(`admin`).then(response => {
@@ -66,7 +64,7 @@ export default function Administradores() {
       <MenBarra />
       <div className={classes.cadastrar}>
       <Button variant="contained" color="primary">
-        <Link to={`/newadmin`} className="button-edit" className={classes.link}>Novo Admin</Link>        
+        <Link to={`/newadmin`} className={classes.link}>Novo Admin</Link>        
       </Button>
       </div>
       <TableContainer component={Paper}>

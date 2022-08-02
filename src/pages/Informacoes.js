@@ -8,7 +8,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { Link } from 'react-router-dom';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import api from '../services/api';
 import { Button } from '@material-ui/core';
@@ -56,14 +56,12 @@ const useStyles = makeStyles({
 export default function Informacoes() {
   const classes = useStyles();
   const [informacoes, setInformacoes] = useState([]);
-  
-  const navigate = useNavigate();
-  const params = useParams();
   const idUsr = params.usrId; 
+  const params = useParams();
 
   useEffect(() => {
-    let idUsr = params.usrId; 
-    api.get(`informacoes/:idUsr`).then(response => {
+    //let idUsr = params.usrId; 
+    api.get(`informacoes/${idUsr}`).then(response => {
         setInformacoes(response.data);
         
     })
@@ -85,7 +83,7 @@ export default function Informacoes() {
       <MenBarra />
       <div className={classes.cadastrar}>
       <Button variant="contained" color="primary">
-        <Link to={`/newinformacao/${idUsr}`} className="button-edit" className={classes.link}>Nova Informação</Link>        
+        <Link to={`/newinformacao/${idUsr}`} className={classes.link}>Nova Informação</Link>        
       </Button>
       </div>
       <TableContainer component={Paper}>

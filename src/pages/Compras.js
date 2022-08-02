@@ -14,7 +14,6 @@ import { Button } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
-import { useNavigate } from 'react-router-dom';
 import MenBarra from '../components/MenBarra/MenBarra';
 import { TextField } from '@material-ui/core';
 
@@ -73,9 +72,6 @@ export default function Compras() {
   const [compras, setCompras] = useState([]);
   const [datVencto, setDatVencto] = useState(['']);
   const [total, setTotal] = useState([]);
-  const totCompras = 0;
-
-  const navigate = useNavigate();
 
   useEffect(() => {
 
@@ -143,7 +139,7 @@ export default function Compras() {
       />
       <div className={classes.cadastrar}>
         <Button variant="contained" color="primary">
-          <Link to={`/pdfCmpVenc/${datVencto}`} className="button-edit" className={classes.link}>Imprime PDF</Link>        
+          <Link to={`/pdfCmpVenc/${datVencto}`} className={classes.link}>Imprime PDF</Link>        
         </Button>
       </div>
       <div className={classes.totaliza}>

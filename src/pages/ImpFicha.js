@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import pdfMake from 'pdfmake/build/pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
-import moment from 'moment';
 import { useParams } from 'react-router-dom';
 import MenBarra from '../components/MenBarra/MenBarra'; 
 
@@ -67,7 +66,6 @@ const useStyles = makeStyles({
         fontFamily: 'Poppins',
         transition: 'all 0.3s ease',
     },
-
 });
 
 function ImpFicha() {
@@ -106,8 +104,6 @@ function ImpFicha() {
     const [usrConjuge, setUsrConjuge] = useState('');
     const [usrNasConjuge, setUsrNasConjuge] = useState('');
     const [usrObsBloqueio, setUsrObsBloqueio] = useState('');
-    const [usrCartao, setUsrCartao] = useState('');
-    const [usrPassword, setUsrPassword] = useState('');
 
     const [filhos, setFilhos] = useState([]);
 
@@ -183,7 +179,7 @@ function ImpFicha() {
                             },
                                                           
                             { 
-                                text: `Data Cadastro:` , fontSize: 8, alignment: 'left', 
+                                text: `Data Cadastro:` , alignment: 'left', 
                                 border:[true, false, true, true],
                                 fontSize: 9,
                                 bold: true
@@ -206,7 +202,7 @@ function ImpFicha() {
                             },
                                                           
                             { 
-                                text: `CPF: ${cpfUsr}`, fontSize: 8, alignment: 'left', 
+                                text: `CPF: ${cpfUsr}`, alignment: 'left', 
                                 border:[true, false, true, true],
                                 fontSize: 9,
                                 bold: true
@@ -229,7 +225,7 @@ function ImpFicha() {
                             },
                                                           
                             { 
-                                text: `Nascimento:` , fontSize: 8, alignment: 'left', 
+                                text: `Nascimento:` ,alignment: 'left', 
                                 border:[true, false, true, true],
                                 fontSize: 9,
                                 bold: true
@@ -252,7 +248,7 @@ function ImpFicha() {
                             },
                                                           
                             { 
-                                text: `Conjuge: ${usrConjuge}`, fontSize: 8, alignment: 'left', 
+                                text: `Conjuge: ${usrConjuge}`, alignment: 'left', 
                                 border:[true, false, true, true],
                                 fontSize: 9,
                                 bold: true
@@ -454,19 +450,19 @@ function ImpFicha() {
                     body: [
                         [
                             { 
-                                text: `Salario Bruto:`+ Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(usrSalBruto), fontSize: 8, alignment: 'left', 
+                                text: `Salario Bruto:`+ Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(usrSalBruto), alignment: 'left', 
                                 border:[true, false, true, true],
                                 fontSize: 9,
                                 bold: true
                             },
                             { 
-                                text: `Salario Base:`+ Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(salarioUsr), fontSize: 8, alignment: 'left', 
+                                text: `Salario Base:`+ Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(salarioUsr), alignment: 'left', 
                                 border:[true, false, true, true],
                                 fontSize: 9,
                                 bold: true
                             },
                             { 
-                                text: `Salario Liquido:`+ Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(usrSalLiquido), fontSize: 8, alignment: 'left', 
+                                text: `Salario Liquido:`+ Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(usrSalLiquido) ,alignment: 'left', 
                                 border:[true, false, true, true],
                                 fontSize: 9,
                                 bold: true

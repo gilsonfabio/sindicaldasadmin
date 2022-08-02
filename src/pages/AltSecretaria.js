@@ -39,8 +39,6 @@ export default function AltSecretaria() {
   const [secCodigo, setSecCodigo] = useState('');
   const [secDescricao, setSecDescricao] = useState('');
   const [secOrgAdm, setSecOrgAdm] = useState('');
-  
-  const [secretarias, setSecretarias] = useState([]);
 
   function handleCreateSecretaria(e) {
     e.preventDefault();

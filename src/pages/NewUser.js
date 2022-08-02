@@ -45,10 +45,6 @@ export default function NewUser() {
   
   const navigate = useNavigate();
   
-  function handleHistory() {
-    //history.push("/landing");
-  }
-
   function handleCreateUser(e) {
     e.preventDefault();
     

@@ -82,7 +82,7 @@ export default function Filiacao() {
       <MenBarra />
       <div className={classes.cadastrar}>
       <Button variant="contained" color="primary">
-        <Link to={`/newfiliacao/${params.usrId}`} className="button-edit" className={classes.link}>Novo Filiação</Link>        
+        <Link to={`/newfiliacao/${params.usrId}`} className={classes.link}>Novo Filiação</Link>        
       </Button>
       </div>
       <TableContainer component={Paper}>

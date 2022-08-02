@@ -45,6 +45,7 @@ import ExtAdmin from './pages/ExtAdmin';
 import PdfExtConv from './pages/PdfExtConv';
 import StaCartao from './pages/StaCartao';
 import ImpFicha from './pages/ImpFicha';
+import PdfCnvContrato from './pages/PdfCnvContrato';
 
 export default function MainRoutes() {
     return(
@@ -93,6 +94,7 @@ export default function MainRoutes() {
             <Route path="/pdfExtConv/:datVencto/" element={<PdfExtConv />} />
             <Route path="/stacartao/:usrId" element={<StaCartao/>} />
             <Route path="/impficha/:usrId" element={<ImpFicha/>} />
+            <Route path="/pdfcnvcontrato/:usrId" element={<PdfCnvContrato/>} />
 
         </Routes>        
     )

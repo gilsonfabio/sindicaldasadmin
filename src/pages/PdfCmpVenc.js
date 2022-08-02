@@ -66,8 +66,8 @@ function PdfCmpVenc() {
 
     const params = useParams();  
 
-    const [datInicial, setDatInicial] = useState();
-    const [datFinal, setDatFinal] = useState();
+    //const [datInicial, setDatInicial] = useState();
+    //const [datFinal, setDatFinal] = useState();
 
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
 

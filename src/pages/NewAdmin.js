@@ -38,10 +38,6 @@ export default function NewAdmin() {
   
   const navigate = useNavigate();
   
-  function handleHistory() {
-    //history.push("/landing");
-  }
-
   function handleCreateAdmin(e) {
     e.preventDefault();
     

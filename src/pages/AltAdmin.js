@@ -38,8 +38,6 @@ export default function AltAdmin() {
 
   const params = useParams();
 
-  const [admins, setAdmins] = useState([]);
-
   const [admNome, setAdmNome] = useState('');
   const [admEmail,  setAdmEmail] = useState('');
   const [admSenha,  setAdmSenha] = useState('');
@@ -66,7 +64,6 @@ export default function AltAdmin() {
     let idAdm = params.admId;
 
     api.get(`searchAdmin/${idAdm}`).then(response => {
-        setAdmins(response.data);    
         setAdmNome(response.data[0].admNome);
         setAdmEmail(response.data[0].admEmail);
         setAdmSenha(response.data[0].admSenha);

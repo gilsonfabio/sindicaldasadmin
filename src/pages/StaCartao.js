@@ -105,9 +105,11 @@ export default function AltServidores() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  const idUsr = params.usrId; 
    
   useEffect(() => { 
-    let idUsr = params.usrId;    
+    //let idUsr = params.usrId;    
     api.get(`searchUser/${idUsr}`).then(response => {
         setUsrNome(response.data[0].usrNome);
         setUsrObsBloqueio(response.data[0].usrObsBloqueio);

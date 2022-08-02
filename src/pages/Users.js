@@ -14,7 +14,6 @@ import { Button } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
-import { useNavigate } from 'react-router-dom';
 import MenBarra from '../components/MenBarra/MenBarra';
 
 const StyledTableCell = withStyles((theme) => ({
@@ -52,7 +51,6 @@ const useStyles = makeStyles({
 export default function Users() {
   const classes = useStyles();
   const [users, setUsers] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     api.get(`users`).then(response => {
@@ -66,7 +64,7 @@ export default function Users() {
       <MenBarra />
       <div className={classes.cadastrar}>
       <Button variant="contained" color="primary">
-        <Link to={`/newuser`} className="button-edit" className={classes.link}>Novo Usuário</Link>        
+        <Link to={`/newuser`} className={classes.link}>Novo Usuário</Link>        
       </Button>
       </div>
       <TableContainer component={Paper}>

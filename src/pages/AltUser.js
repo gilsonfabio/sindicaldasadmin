@@ -37,8 +37,6 @@ export default function AltUser() {
 
   const params = useParams();
 
-  const [users, setUsers] = useState([]);
-
   const [usrNome, setUsrNome] = useState('');
   const [usrEmail,  setUsrEmail] = useState('');
   const [usrSenha,  setUsrSenha] = useState('');
@@ -65,7 +63,6 @@ export default function AltUser() {
     let idUsr = params.usrId;
 
     api.get(`searchUser/${idUsr}`).then(response => {
-        setUsers(response.data);    
         setUsrNome(response.data[0].usrNome);
         setUsrEmail(response.data[0].usrEmail);
         setUsrSenha(response.data[0].usrSenha);

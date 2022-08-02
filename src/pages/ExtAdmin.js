@@ -73,12 +73,8 @@ export default function Compras() {
   const [compras, setCompras] = useState([]);
   const [datVencto, setDatVencto] = useState(['']);
   const [total, setTotal] = useState([]);
-  const totCompras = 0;
-
-  const navigate = useNavigate();
 
   useEffect(() => {
-
     let newDate = new Date();
     let diaNew = newDate.getDate();
     let monthNew = newDate.getMonth() + 1;
@@ -104,20 +100,17 @@ export default function Compras() {
     //})
        
     api.get(`findCompras/${datVencto}`).then(response => {
-      setCompras(response.data);
-      
+      setCompras(response.data);      
     })
 
     api.get(`totCompras/${datVencto}`).then(resp => {
       setTotal(resp.data);
     })
-
   },[]);
 
   useEffect(() => {
     api.get(`findCompras/${datVencto}`).then(response => {
-        setCompras(response.data);
-        
+        setCompras(response.data);        
     })
 
     api.get(`totCompras/${datVencto}`).then(resp => {

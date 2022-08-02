@@ -151,7 +151,7 @@ export default function NewServidor() {
       let parInicial = '8321';
       let parSecundary = $arr_alfa[$_dia];
       let parFinal = parseInt(response.data[0].parSeqCartao);
-      nroCartao = parInicial + parSecundary + parFinal;
+      let nroCartao = parInicial + parSecundary + parFinal;
       setUsrCartao(nroCartao);
       console.log(response.data[0].parSeqCartao);
       console.log(nroCartao);

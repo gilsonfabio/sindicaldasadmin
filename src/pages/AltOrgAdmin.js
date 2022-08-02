@@ -35,11 +35,7 @@ export default function AltOrgAdmin() {
   const navigate = useNavigate();
   
   const params = useParams();
-
-  const [orgCodigo, setOrgCodigo] = useState('');
   const [orgDescricao, setOrgDescricao] = useState('');
-  
-  const [orgadmin, setOrgAdmin] = useState([]);
 
   function handleCreateOrgAdmin(e) {
     e.preventDefault();
